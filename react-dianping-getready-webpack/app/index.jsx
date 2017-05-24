@@ -1,17 +1,17 @@
-import React from 'react'
-import { render } from 'react-dom'
+import React, { Component } from 'react'
+import { render } from  'react-dom'
+import { hashHistroy } from 'react-router'
+import { createStore } from 'redux'
+import { Provider } from 'react-redux'
 
-import './static/css/common.less'
+import rootReduecr from './Reducer/index'
+import RouteMap from './router/RouteMap'
 
-class Hello extends React.Component {
-    render() {
-        return (
-            <p>hello world</p>
-        )
-    }
-}
+const store = createStore(rootReducer)
 
 render(
-    <Hello/>,
-    document.getElementById('root')
+  <Provider store = {store}>
+    <RouteMap histroy  = {hashHistroy}/>
+  </Provider>,
+  document.getElementById('root')
 )
