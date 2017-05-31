@@ -21,7 +21,7 @@ class App extends React.Component {
     }
 
     componentDidMount() {
-      let cityName = ''
+      let cityName
       if (cityName == null) {
           cityName = "武汉"
       }
