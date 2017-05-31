@@ -47,7 +47,7 @@ function mapDispatchToProps(dispatch) {
   }
 }
 
-export default connect({
+export default connect(
   mapStateToProps,
-  mapDispatchToProps
-})(App)
+  mapDispatchToProps,
+)(App)
