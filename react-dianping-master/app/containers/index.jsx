@@ -23,7 +23,7 @@ class App extends React.Component {
     componentDidMount() {
       let cityName = ''
       if (cityName == null) {
-          cityName = '北京'
+          cityName = "武汉"
       }
 
       this.props.userInfoActions.update({
