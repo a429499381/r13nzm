@@ -1,6 +1,6 @@
 import React from 'react'
 import PureRenderMixin from 'react-addons-pure-render-mixin'
-
+import  { Link, hashHistory } from 'react-router'
 import './style.less'
 
 class HomeHeader extends React.Component {
@@ -17,7 +17,9 @@ class HomeHeader extends React.Component {
                     <i className="icon-angle-down"></i>
                 </div>
                 <div className="home-header-right float-right">
+                  <Link to="/login">
                     <i className="icon-user"></i>
+                  </Link>
                 </div>
                 <div className="home-header-middle">
                     <div className="search-container">
