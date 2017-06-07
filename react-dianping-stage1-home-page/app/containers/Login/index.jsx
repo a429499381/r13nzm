@@ -4,6 +4,7 @@ import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 import * as userInfoActionsFromOtherFile from '../../actions/userinfo'
 import LoginComponent from '../../components/LoginComponent'
+import { hashHistory } from 'react-router'
 
 class Login extends React.Component {
   constructor(props, context) {

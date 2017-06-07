@@ -17,7 +17,7 @@ class User extends React.Component {
         return (
             <div>
                 <Header title="用户主页" backRouter="/home"/>
-                <UserInfo username={userinfo.username} city={userinfo.cityName}/>
+                    <UserInfo username={userinfo.username} city={userinfo.cityName}/>
                 <OrderList username={userinfo.username}/>
             </div>
         )

@@ -1,5 +1,13 @@
 import React from 'react'
 import PureRenderMixin from 'react-addons-pure-render-mixin'
+import { connect } from 'react-redux'
+import { bindActionCreators } from 'redux'
+
+import HomeHeader from './subpage/HomeHeader'
+import Swiper from './subpage/Swiper'
+import Ad from './subpage/Ad'
+import List from './subpage/List'
+
 
 class Home extends React.Component {
     constructor(props, context) {
@@ -9,10 +17,26 @@ class Home extends React.Component {
     render() {
         return (
             <div>
-                <h1>home</h1>
+                <HomeHeader cityName = {this.props.userinfo.cityName}/>
+                <Swiper/>
+                <Ad/>
+                <List/>
             </div>
         )
     }
 }
 
-export default Home
+function masS(state) {
+  return {
+      userinfo: state.userinfo
+  }
+}
+
+function masD(dispatch) {
+
+}
+
+export default connect(
+  masS,
+  masD
+)(Home)
